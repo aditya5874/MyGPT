@@ -11,12 +11,6 @@ const PORT = 8080;
 // ===== Middleware =====
 app.use(express.json());
 
-
-
-
-const app = express();
-
-
 const allowedOrigins = [
   'http://localhost:5173', // Your local frontend
   process.env.FRONTEND_URL  // Your *future* Vercel URL
