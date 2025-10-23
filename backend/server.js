@@ -10,10 +10,9 @@ const PORT = 8080;
 
 // ===== Middleware =====
 app.use(express.json());
-// At the top of server.js
-import cors from "cors";
 
-// ... (your other imports)
+
+
 
 const app = express();
 
