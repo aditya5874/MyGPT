@@ -90,7 +90,7 @@
                onClick={() => setShowPassword(!showPassword)}
              ></i>
            </div>
-           // {/* --- END OF CHANGE --- */}
+           
 
            <button type="submit">Sign Up</button>
            <p className="auth-link">
