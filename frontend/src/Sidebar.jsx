@@ -114,7 +114,7 @@
 //     <section className="sidebar">
 //       <button onClick={createNewChat}>
 //         <img
-//           src="src/assets/blacklogo.png"
+//           src="/blacklogo.png"
 //           alt="gpt logo"
 //           className="logo"
 //         ></img>
