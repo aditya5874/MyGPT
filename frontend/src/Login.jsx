@@ -2,7 +2,7 @@
  import { useAuth } from "./AuthContext";
  import { Link } from "react-router-dom";
  import "./Auth.css";
-import blackLogo from "/frontend/src/assets/blacklogo.png";
+
  function Login() {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
@@ -40,7 +40,7 @@ import blackLogo from "/frontend/src/assets/blacklogo.png";
        <div className="auth-box">
          <div className="auth-header">
            <img
-             src={blackLogo}
+             src="/blacklogo.png"
              alt="MyGPT Logo"
              className="auth-logo"
            />
