@@ -1,0 +1,60 @@
+.chats {
+  max-width: 700px;
+  overflow-y: auto;
+  padding: 8rem;
+  height: 100vh;
+  margin: 0 auto;
+}
+/* dark scroll bar color */
+body {
+  background-color: #121212; /* dark background */
+  color: #fff;
+  overflow-y: auto; /* enable scrolling for body */
+  scrollbar-color: #333 #121212; /* for Firefox */
+}
+
+/* Webkit-based browsers (Chrome, Edge, etc.) */
+::-webkit-scrollbar {
+  width: 10px; /* scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #121212; /* track background (dark) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333; /* scrollbar color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* slightly lighter on hover */
+}
+/* continued */
+.userDiv {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+}
+
+.gptDiv {
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.userMessage {
+  background-color: #323232;
+  padding: 10px 20px;
+  border-radius: 14px;
+  margin-left: 15rem;
+  max-width: 500px;
+  width: fit-content;
+}
+
+.hljs {
+  border-radius: 14px !important;
+}
+
+pre {
+  white-space: pre-wrap;
+}
