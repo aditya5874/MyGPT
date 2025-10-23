@@ -10,7 +10,36 @@ const PORT = 8080;
 
 // ===== Middleware =====
 app.use(express.json());
-app.use(cors());
+// At the top of server.js
+import cors from "cors";
+
+// ... (your other imports)
+
+const app = express();
+
+
+const allowedOrigins = [
+  'http://localhost:5173', // Your local frontend
+  process.env.FRONTEND_URL  // Your *future* Vercel URL
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like Postman or mobile apps)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true // Allows cookies/auth headers to be sent
+}));
+// --- END OF CORS CHANGE ---
+
+app.use(express.json());
+// ... (rest of your file)
 
 // ===== Routes =====
 app.use("/api", chatRoutes);
