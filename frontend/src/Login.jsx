@@ -2,7 +2,7 @@
  import { useAuth } from "./AuthContext";
  import { Link } from "react-router-dom";
  import "./Auth.css";
-import blackLogo from "src/assets/blacklogo.png";
+import blackLogo from "frontend/src/assets/blacklogo.png";
  function Login() {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
